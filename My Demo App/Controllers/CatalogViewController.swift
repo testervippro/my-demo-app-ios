@@ -183,13 +183,10 @@ extension CatalogViewController: UICollectionViewDataSource, UICollectionViewDel
         
         let productDataDic = Engine.sharedInstance.productList[indexPath.row]
         var imageName = productDataDic.value(forKey: "ProductImageName") as! String
-        let productName = productDataDic.value(forKey: "ProductName") as! String
-        
-        let productPrice = if Engine.sharedInstance.userName == "visual@example.com" {
-            String(format: "%.2f", Double.random(in: 1...99))
-        } else {
+        let productName = productDataDic.value(forKey: "ProductName") as! String       
+        let productPrice = Engine.sharedInstance.userName == "visual@example.com" ?
+            String(format: "%.2f", Double.random(in: 1...99)) :
             productDataDic.value(forKey: "ProductPrice") as! String
-        }
         
         if Engine.sharedInstance.userName == "visual@example.com" {
             if imageName == "BagBlack Image" {imageName = "ShirtRedOnesie Image"}
