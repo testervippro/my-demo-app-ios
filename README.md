@@ -2,7 +2,7 @@
 
 ---
 
-# Guide to Run iOS App and Export `.app` File
+# Guide to Run iOS App and Export `.app` File to Automation
 
 This guide provides steps to:
 1. Run the iOS app on a simulator or device.
